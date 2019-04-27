@@ -13,25 +13,32 @@ public class InsertionSort {
 	
 	public static void main(String[] args) {
 		
-		int[] myIntArr = { 4, 67, 5, 7, 8, 22, 11, 22 };
+		Integer[] myIntArr = { 4, 67, 5, 7, 8, 22, 11, 22 };
 
 		System.out.println("Before insertion sort:");
-		for (int i : myIntArr) {
-			System.out.print(i + " ");
-		}
+		SortUtils.print(myIntArr);
 
-		System.out.println();
-
-		int[] sortedArr = insertionSort(myIntArr);
+		Integer[] sortedArr = insertionSort(myIntArr);
 
 		System.out.println("After insertion sort:");
-		for (int i : sortedArr) {
-			System.out.print(i + " ");
-		}  
-        
+        SortUtils.print(sortedArr);
 	}
 	
-	public static int[] insertionSort(int[] arr) {
+	public static Integer[] insertionSort(Integer[] arr) {
+		// It starts at one so it doesn't throw an index out of bounds exception 
+		for (int i = 1; i < arr.length; i++) {
+			// we initialize the hold variable to keep the value of the current cell safe
+			int hold = arr[i];
+			// the variable j that will work to check and move variables to be sorted
+			int j = i;
+			
+			
+			while (j > 0 && arr[j - 1] > hold) {
+				arr[j] = arr[j - 1];
+				j--;
+			}
+			arr[j] = hold;
+		}
 		
 		return arr;
 	}
