@@ -1,14 +1,5 @@
 package algorithms;
 
- /**
-  *
-  *	Insertion sort is not a fast algorithm because it uses
-  * nested loops to shift items into place  
-  * 
-  * It's useful only for small data sets
-  * 
-  */
-
 public class InsertionSort {
 	
 	public static void main(String[] args) {
