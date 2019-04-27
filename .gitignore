@@ -35,7 +35,7 @@ out/
 .classpath
 .project
 .settings/
-bin/
+[Bb]in
 tmp/
 *.tmp
 *.bak
