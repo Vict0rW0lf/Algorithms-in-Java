@@ -4,34 +4,33 @@ public class SelectionSort {
 
 	public static void main(String[] args) {
 
-		int[] myIntArr = { 4, 67, 5, 7, 8, 22, 11, 22 };
+		Integer[] myIntArr = { 4, 67, 5, 7, 8, 22, 11, 22 };
 
 		System.out.println("Before selection sort:");
-		for (int i : myIntArr) {
-			System.out.print(i + " ");
-		}
-
-		System.out.println();
-
-		int[] sortedArr = selectionSort(myIntArr);
+		SortUtils.print(myIntArr);
+		
+		Integer[] sortedArr = selectionSort(myIntArr);
 
 		System.out.println("After selection sort:");
-		for (int i : sortedArr) {
-			System.out.print(i + " ");
-		}
+		SortUtils.print(sortedArr);
 
 	}
 
-	public static int[] selectionSort(int[] arr) {
+	public static Integer[] selectionSort(Integer[] arr) {
 
 		/*
 		 * This is a selection sort algorithm (one of the most simple ways to sort an
 		 * array). We go through the entire array and find the lowest element and change
 		 * it to the proper location.
 		 * 
-		 * Step 1 - Set MIN to location 0 Step 2 - Search the minimum element in the
-		 * list Step 3 - Swap with value at location MIN Step 4 - Increment MIN to point
-		 * to next element Step 5 - Repeat until list is sorted
+		 * Steps:
+		 * Initialize variable with index number 
+		 * Loop through array started from index + 1
+		 * If number is smaller than current index value, replace index value with current number until the loop finishes
+		 * Initialize variable with current index number
+		 * Put the old value from arr[i] where the smaller number was found 
+		 * Replace the current arr[i] position with the new small number
+		 * All the aforementioned steps will repeat until the iteration through array finishes
 		 */
 
 		for (int i = 0; i < arr.length; i++) {
