@@ -6,12 +6,12 @@ public class InsertionSort {
 		
 		Integer[] myIntArr = { 4, 67, 5, 7, 8, 22, 11, 22 };
 
-		System.out.println("Before insertion sort:");
+		SortUtils.print("Before insertion sort:");
 		SortUtils.print(myIntArr);
 
 		Integer[] sortedArr = insertionSort(myIntArr);
 
-		System.out.println("After insertion sort:");
+		SortUtils.print("After insertion sort:");
         SortUtils.print(sortedArr);
 	}
 	
