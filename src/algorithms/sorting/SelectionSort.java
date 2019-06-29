@@ -6,12 +6,12 @@ public class SelectionSort {
 
 		Integer[] myIntArr = { 4, 67, 5, 7, 8, 22, 11, 22 };
 
-		System.out.println("Before selection sort:");
+		SortUtils.print("Before selection sort:");
 		SortUtils.print(myIntArr);
 		
 		Integer[] sortedArr = selectionSort(myIntArr);
 
-		System.out.println("After selection sort:");
+		SortUtils.print("After selection sort:");
 		SortUtils.print(sortedArr);
 
 	}
